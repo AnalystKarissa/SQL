@@ -1,0 +1,34 @@
+--Create a clothing store datebase 
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, gender TEXT, price INTEGER, rating INTEGER);
+
+INSERT INTO store VALUES (1, "Red Shirt", "Women", 2.99, 5);
+INSERT INTO store VALUES (2, "White Shirt", "Women", 2.99, 3);
+INSERT INTO store VALUES (3, "Green Shirt", "Women", 2.99, 3);
+INSERT INTO store VALUES (4, "Pink Shirt", "Women", 2.99, 1);
+INSERT INTO store VALUES (5, "Red Pants", "Women", 25.99, 5);
+INSERT INTO store VALUES (6, "White Pants", "Women", 25.99, 4);
+INSERT INTO store VALUES (7, "Green Pants", "Women", 25.99, 3);
+INSERT INTO store VALUES (9, "Pink Pants", "Women", 25.99, 1);
+INSERT INTO store VALUES (10, "White Socks", "Men", 7.99, 5);
+INSERT INTO store VALUES (11, "Black Socks", "Men", 7.99, 5);
+INSERT INTO store VALUES (12, "Grey Socks", "Men", 7.99, 5);
+INSERT INTO store VALUES (13, "Orange Socks", "Men", 7.99, 3);
+INSERT INTO store VALUES (14, "Yellow Socks", "Men", 7.99, 2);
+INSERT INTO store VALUES (15, "Pink Socks", "Men", 7.99, 5);
+
+--display the database ordered by price
+SELECT * FROM store
+ORDER BY price asc;
+
+--what is the avg price of items in the clothing store? 
+
+SELECT AVG(price) FROM store;
+
+--what are the top 10 rated clothing items? 
+
+Select item, gender, price, rating FROM store
+ORDER BY rating desc
+Limit 10
+
+
